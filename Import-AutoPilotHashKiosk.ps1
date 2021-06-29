@@ -16,7 +16,7 @@ Write-Host "Fetching AutoPilot Script"
 Save-Script -Name Get-WindowsAutoPilotInfo -Path ./
 
 Write-Output "`n`nLog in to Azure AD..."
-Connect-AutoPilotIntune
+Connect-MSGraph
 
 $CSVFile = "$(get-date -Format FileDateTimeUniversal).csv"
 ./Get-WindowsAutoPilotInfo.ps1 -OutputFile $CSVFile
